@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ファイル一覧 | test-project-1 | Sunset</title>
+	<script type="text/javascript">
+		function deleteProject() {
+			confirm("プロジェクト\"test-project-1\"を削除します。よろしいですか?");
+			
+			location.href = "index.html";
+		}
+		
+		function createFile() {
+			prompt("新規ファイル名", "");
+		}
+		
+		function createFolder() {
+			prompt("新規フォルダ名", "");
+		}
+		
+		function deleteItem() {
+			confirm("ファイル\"AndroidManifest.xml\"を削除します。よろしいですか?");
+		}
+		
+		function renameItem() {
+			prompt("リネーム後のファイル名", "");
+		}
+		
+		function moveItem() {
+			prompt("移動後のパス", "");
+		}
+		
+		function copyItem() {
+			prompt("コピー後のパス", "");
+		}
+		
+		function uploadItem() {
+			alert("アップロード");
+		}
+		
+		function deploy() {
+			alert("デプロイ完了");
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h2>メニュー</h2>
+		<ul>
+			<li><a href="javascript:deleteProject();">プロジェクト削除</a></li>
+			<li><a href="index.html">プロジェクトを閉じる</a></li>
+			<li><a href="javascript:createFile();">ファイル新規作成</a></li>
+			<li><a href="javascript:createFolder();">フォルダ新規作成</a></li>
+			<li><a href="javascript:deleteItem();">ファイル・フォルダ削除</a></li>
+			<li><a href="javascript:renameItem();">ファイル・フォルダ名変更</a></li>
+			<li><a href="javascript:moveItem();">ファイル・フォルダ移動</a></li>
+			<li><a href="javascript:copyItem();">ファイル・フォルダコピー</a></li>
+			<li><a href="javascript:uploadItem();">アップロード</a></li>
+			<li><a href="javascript:deploy();">ビルド・デプロイ</a></li>
+		</ul>
+	</div>
+	<div>
+		<h1>ファイル一覧</h1>
+		<dl>
+			<dt>現在のパス</dt>
+			<dd>/test-project-1/sample/</dd>
+		</dl>
+		<ul>
+			<li><a href="file-list.html">..</a></li>
+			<li><a href="file-list.html">bin/</a></li>
+			<li><a href="file-list.html">gen/</a></li>
+			<li><a href="file-list.html">libs/</a></li>
+			<li><a href="file-list.html">res/</a></li>
+			<li><a href="file-list.html">src/</a></li>
+			<li><a href="file-editor.html">.classpath</a></li>
+			<li><a href="file-editor.html">.gitignore</a></li>
+			<li><a href="file-editor.html">.project</a></li>
+			<li><a href="file-editor.html">AndroidManifest.xml</a></li>
+			<li><a href="file-editor.html">proguard-project.txt</a></li>
+			<li><a href="file-editor.html">project.properties</a></li>
+		</ul>
+	</div>
+</body>
+</html>
