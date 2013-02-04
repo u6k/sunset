@@ -4,14 +4,27 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>ファイル編集 | AndroidManifest.xml | test-project-1 | Sunset</title>
+	<script type="text/javascript">
+		function deleteFile() {
+			confirm("ファイル\"AndroidManifest.xml\"を削除します。よろしいですか?");
+			
+			location.href = "file-list.html";
+		}
+		
+		function closeEditor() {
+			confirm("ファイルの編集を破棄します。よろしいですか?");
+			
+			location.href = "file-list.html";
+		}
+	</script>
 </head>
 <body>
 	<div>
 		<h2>メニュー</h2>
 		<ul>
-			<li><a href="#">ファイル保存</a></li>
-			<li><a href="#">ファイル削除</a></li>
-			<li><a href="#">閉じる</a></li>
+			<li><a href="file-list.html">ファイル保存</a></li>
+			<li><a href="javascript: deleteFile();">ファイル削除</a></li>
+			<li><a href="javascript: closeEditor();">閉じる</a></li>
 		</ul>
 	</div>
 	<div>
